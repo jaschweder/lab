@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+    protractor:
+      build: .
+      volumes:
+        - ./example:/usr/src
+      links:
+        - hub
+        - firefox
+        - chrome
+      depends_on:
+        - hub
+        - firefox
+        - chrome
+
+    hub:
+      image: selenium/hub
+
+    firefox:
+      image: selenium/node-firefox
+      links:
+        - hub
+      depends_on:
+        - hub
+      environment:
+        - "HUB_PORT_4444_TCP_ADDR=hub"
+        - "HUB_PORT_4444_TCP_PORT=4444"
+
+    chrome:
+      image: selenium/node-chrome
+      links:
+        - hub
+      depends_on:
+        - hub
+      environment:
+        - "HUB_PORT_4444_TCP_ADDR=hub"
+        - "HUB_PORT_4444_TCP_PORT=4444"
