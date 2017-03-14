@@ -1,0 +1,22 @@
+{
+  "name": "karma-mocha-example",
+  "description": "",
+  "main": "karma.conf.js",
+  "authors": [
+    "Jonathan A. Schweder <jonathanschweder@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "https://github.com/jaschweder/karma-mocha-example",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "~1.4.8",
+    "angular": "~1.4.8"
+  }
+}
