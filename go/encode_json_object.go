@@ -12,9 +12,17 @@ type Person struct {
 type People []Person
 
 func main() {
-	p := new(Person)
-	p.Name = "John Doe"
+	p1 := new(Person)
+	p1.Name = "John Doe"
 	
 	encoder := json.NewEncoder(os.Stdout)
-	encoder.Encode(p)
+	encoder.Encode(p1)
+	
+	p2 := new(Person)
+	p2.Name = "Mary Doe"
+	
+	people := People{}
+	people = append(people, *p1)
+	people = append(people, *p2)
+	encoder.Encode(people)
 }
