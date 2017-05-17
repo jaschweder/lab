@@ -32,7 +32,8 @@ $ ./run.sh
 
 ## Built With
 
-* [Go](https://golang.org) - The web framework used
+* [Go](https://golang.org)
+* [ScyllaDB](https://scylladb.com)
 
 ## Contributing
 
