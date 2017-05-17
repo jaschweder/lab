@@ -4,7 +4,7 @@ Example running SQL statements in Golang to ScyllaDB database
 
 ### Prerequisites
 
-[Docker](https://docker.com)
+* [Docker](https://docker.com)
 
 ### Installing
 
