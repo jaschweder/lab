@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    go:
+        image: golang
+        command: go run main.go
+        volumes:
+            - .:/go
+        links:
+            - db
+
+    db:
+        image: scylladb/scylla
+        volumes:
+            - .:/dump

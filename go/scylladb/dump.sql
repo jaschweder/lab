@@ -1,10 +1,9 @@
-CREATE KEYSPACE example
-  WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };
+CREATE KEYSPACE question
+  WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
-USE example;
+USE question;
 
-CREATE TABLE tweet (
-    timeline varchar,
-    id varchar PRIMARY KEY,
-    text text
+CREATE TABLE questions (
+    question text PRIMARY KEY,
+    response text
 );
