@@ -6,10 +6,6 @@ Example running SQL statements in Golang to ScyllaDB database
 
 [Docker](https://docker.com)
 
-```
-$ wget -qO- https://get.docker.com/ | sh
-```
-
 ### Installing
 
 Clone the repo
