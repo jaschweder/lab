@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alphanumeric Recognize</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        canvas {
+            background-color: #fff;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .center {
+            margin: 0 auto;
+            display: table;
+        }
+
+        input {
+            width: 25px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="sketch" width="640" height="480"></canvas>
+    <div class="center">
+        <label>
+            Caracter:
+            <input id="caracter" name="caracter" type="text" maxlength="1">
+        </label>
+        <button id="train">Train</button>
+        <button id="predict">Predict</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://intridea.github.io/sketch.js/lib/sketch.min.js"></script>
+    <script type="text/javascript">
+        var server = "http://localhost:8081";
+
+        function img2base() {
+            return document.getElementById('sketch').toDataURL();
+        }
+
+        function train() {
+            console.log('train');
+            console.log(img2base());
+        }
+
+        function predict() {
+            console.log('predict');
+        }
+
+        $(function() {
+            $('#sketch').sketch();
+            $('#train').on('click', train);
+            $('#predict').on('click', predict);
+        });
+    </script>
+</body>
+</html>
