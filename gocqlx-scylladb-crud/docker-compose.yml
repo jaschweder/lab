@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    api:
+        image: golang
+        volumes:
+            - .:/go/src/github.com/jaschweder/go-scylla-api
+        command: tail -f /dev/stderr
+    db:
+        image: scylladb/scylla
+        command: --memory 1G
