@@ -1,0 +1,8 @@
+/src/facerecognize/build/CMakeFiles/install.dir
+/src/facerecognize/build/CMakeFiles/list_install_components.dir
+/src/facerecognize/build/CMakeFiles/rebuild_cache.dir
+/src/facerecognize/build/CMakeFiles/edit_cache.dir
+/src/facerecognize/build/CMakeFiles/facerecognize.dir
+/src/facerecognize/build/CMakeFiles/facedata.dir
+/src/facerecognize/build/CMakeFiles/install/strip.dir
+/src/facerecognize/build/CMakeFiles/install/local.dir
